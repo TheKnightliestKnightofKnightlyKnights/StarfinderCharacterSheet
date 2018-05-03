@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/char_detail_basicinfo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/character_class_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Class"
+            android:textAlignment="center"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/char_detail_features_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/char_detail_armorprof_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/char_detail_weaponprof_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/char_detail_toolprof_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/char_detail_languages_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/char_detail_equipment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/char_detail_traits_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/char_detail_ideals_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/char_detail_bonds_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/char_detail_flaws_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/char_detail_notes_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

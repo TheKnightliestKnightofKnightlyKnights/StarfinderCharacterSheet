@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/character_stats_1strow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true">
+
+            <TextView
+
+                android:id="@+id/char_name_stats"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                android:hint="Name" />
+
+            <TextView
+                android:id="@+id/char_class"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                android:hint="Name" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/character_stats_2ndrow"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/character_stats_1strow">
+
+            <RelativeLayout
+                android:id="@+id/char_init_layout"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/char_init"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:hint="Initiative"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/char_init_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/char_init"
+                    android:textAlignment="center"
+                    android:hint="0"
+                    android:textSize="45sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/char_stamina_layout"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/char_init_layout"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/char_stamina"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:hint="Stamina Points" />
+
+                <TextView
+                    android:id="@+id/char_stamina_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:hint="0"
+                    android:textAlignment="center"
+                    android:textSize="45sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/char_health_layout"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_toRightOf="@id/char_stamina_layout"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/char_health"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:textAlignment="center"
+                    android:hint="Hit Points" />
+                <TextView
+                    android:id="@+id/char_health_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/char_health"
+                    android:textAlignment="center"
+                    android:hint="0"
+                    android:textSize="45sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/char_speed_layout"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_toRightOf="@id/char_health_layout"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/char_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:textAlignment="center"
+                    android:hint="Speed" />
+                <TextView
+                    android:id="@+id/char_speed_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/char_speed"
+                    android:textAlignment="center"
+                    android:hint="0"
+                    android:textSize="45sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/character_stats_3rdrow"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/character_stats_2ndrow">
+
+            <RelativeLayout
+                android:id="@+id/char_ac_layout"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true">
+
+                <RelativeLayout
+                    android:id="@+id/char_kac_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true">
+
+                    <TextView
+                        android:id="@+id/char_kac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:hint="KAC: 10" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/char_eac_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/char_kac_layout">
+
+                    <TextView
+                        android:id="@+id/char_eac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:layout_alignParentLeft="true"
+                        android:hint="EAC: 10" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/char_saves_layout"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_toRightOf="@id/char_ac_layout">
+
+                <TextView
+                    android:id="@+id/char_saves"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:hint="Saves"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/char_saves_reflex"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/char_saves"
+                    android:hint="Reflex: +3" />
+
+                <TextView
+                    android:id="@+id/char_saves_will"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/char_saves_reflex"
+                    android:hint="Will: +11" />
+
+                <TextView
+                    android:id="@+id/char_saves_con"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/char_saves_will"
+                    android:layout_alignParentBottom="true"
+                    android:hint="Constitution: +3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/char_misc_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/char_saves_layout">
+
+                <TextView
+                    android:id="@+id/char_bab"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="BaB: +0" />
+
+                <TextView
+                    android:id="@+id/char_resolve"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/char_bab"
+                    android:hint="Resolve: 0"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/character_stats_4throw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/character_stats_3rdrow">
+            <View android:id="@+id/strut"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"/>
+
+
+            <RelativeLayout
+                android:id="@+id/char_strength_layout"
+                android:layout_width="190dp"
+                android:layout_height="100dp"
+                android:layout_alignLeft="@id/strut"
+                android:layout_alignParentLeft="true"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/char_strength"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:hint="Strength" />
+                <TextView
+                    android:id="@+id/strength_score_title"
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_strength"
+                    android:textAlignment="center"
+                    android:text="Score"/>
+                <TextView
+                    android:id="@+id/strength_augmentation_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_strength"
+                    android:layout_toRightOf="@id/strength_score_title"
+                    android:textAlignment="center"
+                    android:text="Augments"/>
+                <TextView
+                    android:id="@+id/strength_modifier_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_strength"
+                    android:layout_toRightOf="@id/strength_augmentation_title"
+                    android:textAlignment="center"
+                    android:text="Modifier"/>
+                <TextView
+                    android:id="@+id/strength_score"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/strength_score_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/strength_augmentation"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/strength_augmentation_title"
+                    android:layout_toRightOf="@id/strength_score"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/strength_modifier"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/strength_augmentation"
+                    android:layout_below="@id/strength_modifier_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/char_dexterity_layout"
+                android:layout_width="190dp"
+                android:layout_height="100dp"
+                android:layout_alignLeft="@id/strut"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/char_strength_layout"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/char_dexterity"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:hint="Dexterity" />
+                <TextView
+                    android:id="@+id/dexterity_score_title"
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_dexterity"
+                    android:textAlignment="center"
+                    android:text="Score"/>
+                <TextView
+                    android:id="@+id/dexterity_augmentation_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_dexterity"
+                    android:layout_toRightOf="@id/dexterity_score_title"
+                    android:textAlignment="center"
+                    android:text="Augments"/>
+                <TextView
+                    android:id="@+id/dexterity_modifier_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_dexterity"
+                    android:layout_toRightOf="@id/dexterity_augmentation_title"
+                    android:textAlignment="center"
+                    android:text="Modifier"/>
+                <TextView
+                    android:id="@+id/dexterity_score"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/dexterity_score_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/dexterity_augmentation"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/dexterity_augmentation_title"
+                    android:layout_toRightOf="@id/dexterity_score"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/dexterity_modifier"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/dexterity_augmentation"
+                    android:layout_below="@id/dexterity_modifier_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/char_constitution_layout"
+                android:layout_width="190dp"
+                android:layout_height="100dp"
+                android:layout_alignLeft="@id/strut"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/char_dexterity_layout"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/char_constitution"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:hint="Constitution" />
+                <TextView
+                    android:id="@+id/constitution_score_title"
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_constitution"
+                    android:textAlignment="center"
+                    android:text="Score"/>
+                <TextView
+                    android:id="@+id/constitution_augmentation_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_constitution"
+                    android:layout_toRightOf="@id/constitution_score_title"
+                    android:textAlignment="center"
+                    android:text="Augments"/>
+                <TextView
+                    android:id="@+id/constitution_modifier_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_constitution"
+                    android:layout_toRightOf="@id/constitution_augmentation_title"
+                    android:textAlignment="center"
+                    android:text="Modifier"/>
+                <TextView
+                    android:id="@+id/constitution_score"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/constitution_score_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/constitution_augmentation"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/constitution_augmentation_title"
+                    android:layout_toRightOf="@id/constitution_score"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/constitution_modifier"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/constitution_augmentation"
+                    android:layout_below="@id/constitution_modifier_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/char_wisdom_layout"
+                android:layout_width="190dp"
+                android:layout_height="100dp"
+                android:layout_alignRight="@id/strut"
+                android:layout_alignParentRight="true"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/char_wisdom"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:hint="Wisdom" />
+                <TextView
+                    android:id="@+id/wisdom_score_title"
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_wisdom"
+                    android:textAlignment="center"
+                    android:text="Score"/>
+                <TextView
+                    android:id="@+id/wisdom_augmentation_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_wisdom"
+                    android:layout_toRightOf="@id/wisdom_score_title"
+                    android:textAlignment="center"
+                    android:text="Augments"/>
+                <TextView
+                    android:id="@+id/wisdom_modifier_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_wisdom"
+                    android:layout_toRightOf="@id/wisdom_augmentation_title"
+                    android:textAlignment="center"
+                    android:text="Modifier"/>
+                <TextView
+                    android:id="@+id/wisdom_score"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/wisdom_score_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/wisdom_augmentation"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/wisdom_augmentation_title"
+                    android:layout_toRightOf="@id/wisdom_score"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/wisdom_modifier"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/wisdom_augmentation"
+                    android:layout_below="@id/wisdom_modifier_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/char_intelligence_layout"
+                android:layout_width="190dp"
+                android:layout_height="100dp"
+                android:layout_alignRight="@id/strut"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/char_wisdom_layout"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/char_intelligence"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:hint="Intelligence" />
+                <TextView
+                    android:id="@+id/intelligence_score_title"
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_intelligence"
+                    android:textAlignment="center"
+                    android:text="Score"/>
+                <TextView
+                    android:id="@+id/intelligence_augmentation_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_intelligence"
+                    android:layout_toRightOf="@id/intelligence_score_title"
+                    android:textAlignment="center"
+                    android:text="Augments"/>
+                <TextView
+                    android:id="@+id/intelligence_modifier_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_intelligence"
+                    android:layout_toRightOf="@id/intelligence_augmentation_title"
+                    android:textAlignment="center"
+                    android:text="Modifier"/>
+                <TextView
+                    android:id="@+id/intelligence_score"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/intelligence_score_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/intelligence_augmentation"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/intelligence_augmentation_title"
+                    android:layout_toRightOf="@id/intelligence_score"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/intelligence_modifier"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/intelligence_augmentation"
+                    android:layout_below="@id/intelligence_modifier_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/char_charisma_layout"
+                android:layout_width="190dp"
+                android:layout_height="100dp"
+                android:layout_alignRight="@id/strut"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/char_intelligence_layout"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/char_charisma"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:hint="Charisma" />
+                <TextView
+                    android:id="@+id/charisma_score_title"
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_charisma"
+                    android:textAlignment="center"
+                    android:text="Score"/>
+                <TextView
+                    android:id="@+id/charisma_augmentation_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_charisma"
+                    android:layout_toRightOf="@id/charisma_score_title"
+                    android:textAlignment="center"
+                    android:text="Augments"/>
+                <TextView
+                    android:id="@+id/charisma_modifier_title"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/char_charisma"
+                    android:layout_toRightOf="@id/charisma_augmentation_title"
+                    android:textAlignment="center"
+                    android:text="Modifier"/>
+                <TextView
+                    android:id="@+id/charisma_score"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/charisma_score_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/charisma_augmentation"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/charisma_augmentation_title"
+                    android:layout_toRightOf="@id/charisma_score"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/charisma_modifier"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/charisma_augmentation"
+                    android:layout_below="@id/charisma_modifier_title"
+                    android:textAlignment="center"
+                    android:textSize="45dp"
+                    android:text="0"/>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

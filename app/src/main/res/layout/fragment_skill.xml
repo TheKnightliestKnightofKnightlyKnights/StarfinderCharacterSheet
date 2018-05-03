@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerSkill"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"></android.support.v4.view.ViewPager>
+
+    <View android:id="@+id/strut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+    <RelativeLayout
+        android:id="@+id/strength_skill_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/strut">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/strength_skill_title"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textAlignment="center"
+                android:text="Strength"/>
+            <TextView
+                android:id="@+id/strength_athletics_title"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/strength_skill_title"
+                android:text="Athletics"/>
+            <TextView
+                android:id="@+id/strength_athletics_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/strength_athletics_title"
+                android:layout_below="@id/strength_skill_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dexterity_skill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/strut"
+        android:layout_below="@id/strength_skill_layout">
+
+        <RelativeLayout
+            android:id="@+id/dexterity_acrobatics_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/dexterity_title"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textAlignment="center"
+                android:text="Dexterity"/>
+            <TextView
+                android:id="@+id/dexterity_acrobatics_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/dexterity_title"
+                android:text="Acrobatics"/>
+            <TextView
+                android:id="@+id/dexterity_acrobatics_number"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/dexterity_acrobatics_title"
+                android:layout_below="@id/dexterity_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dexterity_sleightofhand_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/dexterity_acrobatics_layout">
+
+            <TextView
+                android:id="@+id/dexterity_sleightofhand_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Sleight of Hand" />
+
+            <TextView
+                android:id="@+id/dexterity_sleightofhand_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/dexterity_sleightofhand_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dexterity_stealth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/dexterity_sleightofhand_layout">
+
+            <TextView
+                android:id="@+id/dexterity_stealth_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Stealth" />
+
+            <TextView
+                android:id="@+id/dexterity_stealth_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/dexterity_stealth_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/intelligence_skill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/dexterity_skill_layout"
+        android:layout_toLeftOf="@id/strut">
+        <RelativeLayout
+            android:id="@+id/intelligence_computers_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/intelligence_skill_title"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textAlignment="center"
+                android:text="Intelligence"/>
+            <TextView
+                android:id="@+id/intelligence_computers_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/intelligence_skill_title"
+                android:text="Computers"/>
+            <TextView
+                android:id="@+id/intelligence_computers_number"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/intelligence_computers_title"
+                android:layout_below="@id/intelligence_skill_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/intelligence_culture_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/intelligence_computers_layout">
+
+            <TextView
+                android:id="@+id/intelligence_culture_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Culture" />
+
+            <TextView
+                android:id="@+id/intelligence_culture_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/intelligence_culture_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/intelligence_engineering_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/intelligence_culture_layout">
+
+            <TextView
+                android:id="@+id/intelligence_engineering_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Engineering" />
+
+            <TextView
+                android:id="@+id/intelligence_engineering_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/intelligence_engineering_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/intelligence_lifescience_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/intelligence_engineering_layout">
+
+            <TextView
+                android:id="@+id/intelligence_lifescience_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Life Science" />
+
+            <TextView
+                android:id="@+id/intelligence_lifescience_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/intelligence_lifescience_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/intelligence_medicine_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/intelligence_lifescience_layout">
+
+            <TextView
+                android:id="@+id/intelligence_medicine_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Medicine" />
+
+            <TextView
+                android:id="@+id/intelligence_medicine_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/intelligence_medicine_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/intelligence_physicalscience_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/intelligence_medicine_layout">
+
+            <TextView
+                android:id="@+id/intelligence_physicalscience_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Physical Science" />
+
+            <TextView
+                android:id="@+id/intelligence_physicalscience_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/intelligence_physicalscience_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wisdom_skill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/strut">
+        <RelativeLayout
+            android:id="@+id/wisdom_mysticism_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/wisdom_skill_title"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textAlignment="center"
+                android:text="Wisdom"/>
+            <TextView
+                android:id="@+id/wisdom_mysticism_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/wisdom_skill_title"
+                android:text="Mysticism"/>
+            <TextView
+                android:id="@+id/wisdom_mysticism_number"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/wisdom_mysticism_title"
+                android:layout_below="@id/wisdom_skill_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wisdom_perception_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/wisdom_mysticism_layout">
+
+            <TextView
+                android:id="@+id/wisdom_perception_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Perception" />
+
+            <TextView
+                android:id="@+id/wisdom_perception_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/wisdom_perception_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wisdom_sensemotive_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/wisdom_perception_layout">
+
+            <TextView
+                android:id="@+id/wisdom_sensemotive_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Sense Motive" />
+
+            <TextView
+                android:id="@+id/wisdom_sensemotive_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/wisdom_sensemotive_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wisdom_survival_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/wisdom_sensemotive_layout">
+
+            <TextView
+                android:id="@+id/wisdom_survival_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Survival" />
+
+            <TextView
+                android:id="@+id/wisdom_survival_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/wisdom_survival_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/charisma_skill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/strut"
+        android:layout_below="@id/wisdom_skill_layout">
+        <RelativeLayout
+            android:id="@+id/charisma_bluff_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/charisma_skill_title"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textAlignment="center"
+                android:text="Charisma"/>
+            <TextView
+                android:id="@+id/charisma_bluff_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/charisma_skill_title"
+                android:text="Bluff"/>
+            <TextView
+                android:id="@+id/charisma_bluff_number"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/charisma_bluff_title"
+                android:layout_below="@id/charisma_skill_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/charisma_diplomacy_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/charisma_bluff_layout">
+
+            <TextView
+                android:id="@+id/charisma_diplomacy_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Diplomacy" />
+
+            <TextView
+                android:id="@+id/charisma_diplomacy_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/charisma_diplomacy_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/charisma_disguise_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/charisma_diplomacy_layout">
+
+            <TextView
+                android:id="@+id/charisma_disguise_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Disguise" />
+
+            <TextView
+                android:id="@+id/charisma_disguise_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/charisma_disguise_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/charisma_intimidate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/charisma_disguise_layout">
+
+            <TextView
+                android:id="@+id/charisma_intimidate_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Intimidate" />
+
+            <TextView
+                android:id="@+id/charisma_intimidate_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/charisma_intimidate_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/other_skill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/strut"
+        android:layout_below="@id/charisma_skill_layout">
+        <RelativeLayout
+            android:id="@+id/other_profession1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/other_skill_title"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textAlignment="center"
+                android:text="Other"/>
+            <TextView
+                android:id="@+id/other_profession1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/other_skill_title"
+                android:text="Profession"/>
+            <TextView
+                android:id="@+id/other_profession1_number"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/other_profession1_title"
+                android:layout_below="@id/other_skill_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/other_profession2_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/other_profession1_layout">
+
+            <TextView
+                android:id="@+id/other_profession2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Profession" />
+
+            <TextView
+                android:id="@+id/other_profession2_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/other_profession2_title"
+                android:gravity="right"
+                android:text="0"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
